@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+	var body: some View {
+		ConverImageView()
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
