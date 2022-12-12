@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConverImageView: View {
+struct CoverImageView: View {
 	//creiei meu proprio extension para bundle
 	let coverImage: [CoverImageModel] = Bundle.main.decodeJsonFromBundle(forResource: "covers", withExtension: "json") ?? []
 	
@@ -29,7 +29,7 @@ struct ConverImageView: View {
 
 struct ConverImageView_Previews: PreviewProvider {
 	static var previews: some View {
-		ConverImageView()
+		CoverImageView()
 			.previewLayout(.fixed(width: 400, height: 300))
 	}
 }

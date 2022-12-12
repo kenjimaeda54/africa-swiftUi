@@ -9,7 +9,7 @@ import Foundation
 
 extension Bundle {
 	
-	func decodeJsonFromBundle(forResource: String,withExtension: String) -> [CoverImageModel]? {
+	func decodeJsonFromBundle<T: Codable>(forResource: String,withExtension: String) -> T? {
 		
 		guard let url = self.url(forResource: forResource, withExtension: withExtension) else {
 			print("Failed get forResource")
@@ -22,7 +22,7 @@ extension Bundle {
 			let json = JSONDecoder()
 			
 			do {
-				let coverImage =	 try json.decode([CoverImageModel].self, from: data)
+				let coverImage =	 try json.decode(T.self, from: data)
 				return coverImage
 			}catch {
 				return nil
