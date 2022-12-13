@@ -10,11 +10,11 @@ import AVKit
 
 var player: AVPlayer?
 
-
-func playVideo(forResource: String,extesion: String) -> AVPlayer? {
-	guard let url = Bundle.main.url(forResource: forResource, withExtension: extesion) else {return nil}
+func playVideo(forResource: String, withExtension: String) -> AVPlayer? {
+	guard let url = Bundle.main.url(forResource: forResource, withExtension: withExtension) else {return nil}
+	
 	let avPlayer = AVPlayer(url: url)
 	player = avPlayer
 	player?.play()
-	return player
+  return player
 }

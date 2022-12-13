@@ -14,19 +14,21 @@ struct VideoPlayerView: View {
 	let resource:String
 	
 	var body: some View {
-		VideoPlayer(player: playVideo(forResource:  resource, extesion: ".mp4"))
-			.overlay(alignment: .topLeading ,content: {
+		
+		VideoPlayer(player: playVideo(forResource: resource, withExtension: ".mp4"))
+			.overlay(alignment: .topLeading ) {
 				Image("logo")
 					.resizable()
 					.scaledToFit()
 					.frame(width: 32,height: 32)
-				
-				
-			})
+					.padding(.horizontal,10)
+			}
+			
 			.padding(.vertical,6)
-			.padding(.horizontal,10)
 			.navigationTitle(videoTitle.uppercased())
 			.navigationBarTitleDisplayMode(.inline)
+		
+		
 	}
 	
 }
