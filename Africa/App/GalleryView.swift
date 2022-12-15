@@ -11,8 +11,8 @@ struct GalleryView: View {
 	//MARK: - Properties
 	@State private var imageSelected = "lion"
 	@State private var gridLayout: [GridItem] = [GridItem(.flexible())]
-	//slider espera um dobule por isso iniciamos as column com double
-	@State private var column: Double = 3.0
+	@State private var gridColumn: Double =  3.0
+	//se for inteiro vai acusar BinaryFloatingPoint
 	
 	let animals: [AnimalsModel] = Bundle.main.decodeJsonFromBundle(forResource: "animals", withExtension: ".json") ??  []
 	
@@ -27,10 +27,10 @@ struct GalleryView: View {
 	//	let gridItem: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
 	//
 	
-	func prepareGridItem() {
-		gridLayout = Array(repeating: .init(.flexible()), count: Int(column))
-		
+	func switchGridLayout() {
+		gridLayout = Array(repeating: .init(.flexible()), count: Int(gridColumn))
 	}
+	
 	
 	var body: some View {
 		ScrollView {
@@ -45,13 +45,15 @@ struct GalleryView: View {
 							.stroke(Color.white,lineWidth: 1)
 					})
 				
+				
 				//assim que o value mudar ja reflete no column
 				//para acontecer esse bind precisa do $ e a prorpiedade ser State
-				Slider(value: $column,in: 2...4,step: 1) {_ in
-					withAnimation(.easeInOut(duration: 0.1)) {
-						prepareGridItem()
+				Slider(value: $gridColumn,in: 2...4,step: 1) { _ in
+					withAnimation(.easeIn(duration: 0.09)) {
+						switchGridLayout()
 					}
 				}
+				
 				
 				LazyVGrid(columns: gridLayout) {
 					ForEach(animals)  { animal in
@@ -78,7 +80,7 @@ struct GalleryView: View {
 		.background(MotionEffectView())
 		//preciso sempre iniciar o prepareGridItem()
 		.onAppear {
-			prepareGridItem()
+			switchGridLayout()
 		}
 	}
 }
