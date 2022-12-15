@@ -45,6 +45,7 @@
 		81B710A52947961600FD9DC2 /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B710A42947961600FD9DC2 /* GalleryImage.swift */; };
 		81B710A72947A98000FD9DC2 /* InsetMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B710A62947A98000FD9DC2 /* InsetMapView.swift */; };
 		81B710A92947ADB100FD9DC2 /* ExternalWebLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B710A82947ADB100FD9DC2 /* ExternalWebLinkView.swift */; };
+		81C4DF7D294AA1C100A4C27D /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4DF7C294AA1C100A4C27D /* LocationsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		81B710A42947961600FD9DC2 /* GalleryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
 		81B710A62947A98000FD9DC2 /* InsetMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetMapView.swift; sourceTree = "<group>"; };
 		81B710A82947ADB100FD9DC2 /* ExternalWebLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWebLinkView.swift; sourceTree = "<group>"; };
+		81C4DF7C294AA1C100A4C27D /* LocationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				8185FD6D2944EEAA00817116 /* CoverImageModel.swift */,
 				8185FD6F2945510F00817116 /* AnimalsModel.swift */,
 				814484D12948BFB100CB200C /* VideoModel.swift */,
+				81C4DF7C294AA1C100A4C27D /* LocationsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				81B710A92947ADB100FD9DC2 /* ExternalWebLinkView.swift in Sources */,
 				814484D52948C03100CB200C /* videoMock.swift in Sources */,
 				814484D82948CEB600CB200C /* PlayVideo.swift in Sources */,
+				81C4DF7D294AA1C100A4C27D /* LocationsModel.swift in Sources */,
 				814484D22948BFB100CB200C /* VideoModel.swift in Sources */,
 				81B710A72947A98000FD9DC2 /* InsetMapView.swift in Sources */,
 				8185FD6E2944EEAA00817116 /* CoverImageModel.swift in Sources */,
