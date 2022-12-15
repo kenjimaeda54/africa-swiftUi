@@ -11,11 +11,10 @@ import MapKit
 struct MapView: View {
 	//MARK: - Properties
 	@State var region: MKCoordinateRegion = {
-		let location = CLLocationCoordinate2D(latitude: 6.600286, longitude: 16.43775599)
-		//quanto maior zoom,distancia que o mapa
-		//vai abriar e maior
+		let center = CLLocationCoordinate2D(latitude: 6.600286, longitude: 16.4377599)
+		//quanto maior o zoom maior proximo sera quando o map abrir
 		let mapZoomLevel = MKCoordinateSpan(latitudeDelta: 70.0, longitudeDelta: 70.0)
-		let region = MKCoordinateRegion(center: location, span: mapZoomLevel)
+		let region =  MKCoordinateRegion(center: center, span: mapZoomLevel)
 		return region
 	}()
 	
@@ -23,16 +22,78 @@ struct MapView: View {
 	
 	
 	var body: some View {
-		Map(coordinateRegion: $region,annotationItems: locations) { annotation in
-			//Uma maneira de criar anotations
-			//			MapMarker(coordinate: annotation.location,tint: .accentColor)
-			MapAnnotation(coordinate: annotation.location) {
-				Image("logo")
+		Map(coordinateRegion: $region,annotationItems: locations) { annotations in
+			//esse cordinate esera um CLLocationCoordinate2D
+			//nos criamos como propriedade computada
+			//MapMarker(coordinate: annotations.location,tint: .accentColor)
+			
+			//			MapAnnotation(coordinate: annotations.location) {
+			//				Image("logo")
+			//					.resizable()
+			//					.scaledToFit()
+			//					.frame(width: 32,height: 32)
+			//			}
+			MapAnnotation(coordinate: annotations.location) {
+				MapAnnotationView(location: annotations)
+			}
+			
+		}//MAP
+		.overlay(alignment: .top) {
+			
+			HStack(alignment: .center, spacing: 10) {
+				Image("compass")
 					.resizable()
 					.scaledToFit()
-					.frame(width: 32,height: 32)
-			}
-		}
+					.frame(width: 52,height: 52)
+					.padding(.horizontal,10)
+					.padding(.vertical,10)
+				
+				VStack(alignment: .leading) {
+					HStack {
+						Text("Latitude")
+							.font(.footnote)
+							.foregroundColor(.accentColor)
+						
+						Spacer()
+						
+						Text("\(region.center.latitude)")
+							.font(.footnote)
+					}
+					
+					Divider()
+					
+					HStack {
+						Text("Longitude")
+							.font(.footnote)
+							.foregroundColor(.accentColor)
+						
+						
+						Spacer()
+						
+						Text("\(region.center.longitude)")
+							.font(.footnote)
+					}
+					
+					
+				}//VStack
+				.padding(.horizontal,10)
+				.padding(.vertical,5)
+				
+				
+			} //Hstack
+			.background(
+				Color.black
+					.cornerRadius(6)
+					.opacity(0.6)
+				
+			)
+			.padding(.vertical, 55)
+			.padding(.horizontal,20)
+			
+		} //Overlay
+		.edgesIgnoringSafeArea(.all)
+	
+		
 	}
 }
 
