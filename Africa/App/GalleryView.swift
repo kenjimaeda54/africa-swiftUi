@@ -12,6 +12,7 @@ struct GalleryView: View {
 	@State private var imageSelected = "lion"
 	@State private var gridLayout: [GridItem] = [GridItem(.flexible())]
 	@State private var gridColumn: Double =  3.0
+	let hapitcs = UIImpactFeedbackGenerator(style: .medium)
 	//se for inteiro vai acusar BinaryFloatingPoint
 	
 	let animals: [AnimalsModel] = Bundle.main.decodeJsonFromBundle(forResource: "animals", withExtension: ".json") ??  []
@@ -27,13 +28,16 @@ struct GalleryView: View {
 	//	let gridItem: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
 	//
 	
+	//MARK: - func
+	
 	func switchGridLayout() {
+		hapitcs.impactOccurred()
 		gridLayout = Array(repeating: .init(.flexible()), count: Int(gridColumn))
 	}
 	
 	
 	var body: some View {
-		ScrollView {
+		ScrollView(showsIndicators: false) {
 			VStack(alignment: .center, spacing: 35) {
 				
 				Image(imageSelected)

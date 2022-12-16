@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		812E8A8D294B64DE005E0275 /* MotionEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A8C294B64DE005E0275 /* MotionEffectView.swift */; };
+		812E8A8F294CA7D3005E0275 /* AnimalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */; };
 		814484D02948BF9800CB200C /* VideoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484CF2948BF9800CB200C /* VideoItemView.swift */; };
 		814484D22948BFB100CB200C /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484D12948BFB100CB200C /* VideoModel.swift */; };
 		814484D52948C03100CB200C /* videoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484D42948C03100CB200C /* videoMock.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		812E8A8C294B64DE005E0275 /* MotionEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionEffectView.swift; sourceTree = "<group>"; };
+		812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGridView.swift; sourceTree = "<group>"; };
 		814484CF2948BF9800CB200C /* VideoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItemView.swift; sourceTree = "<group>"; };
 		814484D12948BFB100CB200C /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		814484D42948C03100CB200C /* videoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoMock.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				814484D92948D1AB00CB200C /* VideoPlayerView.swift */,
 				81C4DF7E294AA97E00A4C27D /* MapAnnotationView.swift */,
 				812E8A8C294B64DE005E0275 /* MotionEffectView.swift */,
+				812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				81AABF2B2943EF2B00034429 /* MapView.swift in Sources */,
 				81B710A92947ADB100FD9DC2 /* ExternalWebLinkView.swift in Sources */,
 				814484D52948C03100CB200C /* videoMock.swift in Sources */,
+				812E8A8F294CA7D3005E0275 /* AnimalGridView.swift in Sources */,
 				814484D82948CEB600CB200C /* PlayVideo.swift in Sources */,
 				81C4DF7D294AA1C100A4C27D /* LocationsModel.swift in Sources */,
 				814484D22948BFB100CB200C /* VideoModel.swift in Sources */,
