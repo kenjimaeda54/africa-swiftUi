@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		812E8A8D294B64DE005E0275 /* MotionEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A8C294B64DE005E0275 /* MotionEffectView.swift */; };
 		812E8A8F294CA7D3005E0275 /* AnimalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */; };
+		812E8A91294CB332005E0275 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A90294CB332005E0275 /* CreditsView.swift */; };
+		812E8A94294CB46A005E0275 /* ContentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8A93294CB46A005E0275 /* ContentModifiers.swift */; };
 		814484D02948BF9800CB200C /* VideoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484CF2948BF9800CB200C /* VideoItemView.swift */; };
 		814484D22948BFB100CB200C /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484D12948BFB100CB200C /* VideoModel.swift */; };
 		814484D52948C03100CB200C /* videoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814484D42948C03100CB200C /* videoMock.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		812E8A8C294B64DE005E0275 /* MotionEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionEffectView.swift; sourceTree = "<group>"; };
 		812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGridView.swift; sourceTree = "<group>"; };
+		812E8A90294CB332005E0275 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		812E8A93294CB46A005E0275 /* ContentModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModifiers.swift; sourceTree = "<group>"; };
 		814484CF2948BF9800CB200C /* VideoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItemView.swift; sourceTree = "<group>"; };
 		814484D12948BFB100CB200C /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		814484D42948C03100CB200C /* videoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoMock.swift; sourceTree = "<group>"; };
@@ -111,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812E8A92294CB449005E0275 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				812E8A93294CB46A005E0275 /* ContentModifiers.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		8185FD632944EC0F00817116 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,7 @@
 				81C4DF7E294AA97E00A4C27D /* MapAnnotationView.swift */,
 				812E8A8C294B64DE005E0275 /* MotionEffectView.swift */,
 				812E8A8E294CA7D3005E0275 /* AnimalGridView.swift */,
+				812E8A90294CB332005E0275 /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 		81AABEF92943E97100034429 /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				812E8A92294CB449005E0275 /* Modifiers */,
 				8185FD7529455B8300817116 /* Mock */,
 				8185FD6C2944EE8E00817116 /* Models */,
 				8185FD662944EE2E00817116 /* Extension */,
@@ -327,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AABF2D2943EF4500034429 /* VideoListView.swift in Sources */,
+				812E8A91294CB332005E0275 /* CreditsView.swift in Sources */,
 				81AABF2F2943EF9400034429 /* MainView.swift in Sources */,
 				81B710A52947961600FD9DC2 /* GalleryImage.swift in Sources */,
 				812E8A8D294B64DE005E0275 /* MotionEffectView.swift in Sources */,
@@ -337,6 +352,7 @@
 				8185FD74294552CB00817116 /* ListItemView.swift in Sources */,
 				81B710A3294792D100FD9DC2 /* HeadingView.swift in Sources */,
 				814484D02948BF9800CB200C /* VideoItemView.swift in Sources */,
+				812E8A94294CB46A005E0275 /* ContentModifiers.swift in Sources */,
 				81C4DF81294AA9A800A4C27D /* locationMock.swift in Sources */,
 				8185FD702945510F00817116 /* AnimalsModel.swift in Sources */,
 				81AABF2B2943EF2B00034429 /* MapView.swift in Sources */,

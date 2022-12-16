@@ -30,7 +30,7 @@ struct ContentView: View {
 	var body: some View {
 		
 		
-		NavigationStack {
+		NavigationView {
 			Group {
 				if !isGridView {
 					List {
@@ -49,6 +49,10 @@ struct ContentView: View {
 								//para selecionar o elemento
 							}
 						}
+						//criei um modifier para centralizar
+						//o conteudo
+						CreditsView()
+							.modifier(CenterModifier())
 						
 					}
 				} else {
