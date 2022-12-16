@@ -106,10 +106,11 @@ ScrollView(showsIndicators: false){
 ```
 
 ## 
-- Abaixo um exemplo como iniciar play video 
+- Abaixo um exemplo como iniciar videos locais 
 
 ```swift
-//criei uma extensao 
+//criei uma extensão 
+
 import Foundation
 import AVKit
 
@@ -130,11 +131,11 @@ VideoPlayer(player: playVideo(forResource: resource, withExtension: ".mp4"))
 ```
 
 ##
-- Criei anotacions personalizadas no mapa
+- Criei anotações personalizadas no mapa
 - Normalmente componentes como Map e Toggle usam a ideia de bind
-- Por isso o $ , nesete caso o bind esta sendo a propriedade region
-- Para bind ocorrer precisa da anotacao @
-- Regiao no coordinateRegion e para representar o pais ou continente e dentro do MapAnnotations somos especificos em oque desejamos
+- Por isso o $ , neste caso o bind esta sendo a propriedade region
+- Para bind ocorrer precisa da anotação @
+- CoordinateRegion é para representar o país ou continente e em MapAnnotations e especifidade desta região 
 
 
 ```swift
@@ -191,8 +192,8 @@ Map(coordinateRegion: $region,annotationItems: locations) { annotations in
 ```
 
 ##
-- Para criar decode de um arquivo json local podemos usar o metodo url e depois caputrar o data e por fim realizar o decoder
-- Eu criei uma extensao para ficar mais conviniente esse procedimento
+- Para criar decode de um arquivo json local, podemos usar o método url é depois recuperar  o data ,por fim realizar o decoder
+- Eu criei uma extensão para ficar mais conveniente esse procedimento
 
 ```swift
 extension Bundle {
@@ -231,9 +232,9 @@ extension Bundle {
 ```
 
 ## 
-- Swift permite nos criarmos nosso propios modificaddoers
-- Caso nao exista uma propriedade voce pode crirar a sua,criei uma para centralizar os direitos autoriais
-
+- Swift permite nos criarmos nossos  modificadores
+- Caso precise de uma propriedade específica pode criar a sua. 
+- Abaixo um exemplo como criar um modificado
 
 
 
